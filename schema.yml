@@ -1,0 +1,64 @@
+openapi: 3.0.3
+info:
+  title: Your Project API
+  version: 1.0.0
+  description: Your project description
+paths:
+  /email-send/:
+    post:
+      operationId: email_send_create
+      tags:
+      - email-send
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          description: No response body
+  /findindex/:
+    post:
+      operationId: findindex_create
+      tags:
+      - findindex
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          description: No response body
+  /log/:
+    post:
+      operationId: log_create
+      tags:
+      - log
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          description: No response body
+  /login/:
+    post:
+      operationId: login_create
+      tags:
+      - login
+      security:
+      - jwtAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /register/:
+    post:
+      operationId: register_create
+      tags:
+      - register
+      security:
+      - jwtAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+components:
+  securitySchemes:
+    jwtAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
